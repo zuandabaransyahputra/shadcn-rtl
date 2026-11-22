@@ -1,5 +1,5 @@
 /** The deployed demo / registry URL. Change it here (and in registry.json "homepage"). */
-export const SITE_URL = "https://shadcn-rtl.vercel.app"
+export const SITE_URL = "https://shadcn-rtl-ui.vercel.app"
 
 export const site = {
   name: "shadcn-rtl",

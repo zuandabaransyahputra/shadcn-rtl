@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "shadcn-rtl",
-  "homepage": "https://shadcn-rtl.vercel.app",
+  "homepage": "https://shadcn-rtl-ui.vercel.app",
   "items": [
     {
       "name": "direction-provider",

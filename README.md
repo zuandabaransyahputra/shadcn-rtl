@@ -2,7 +2,7 @@
 
 RTL- and Arabic-ready components for [shadcn/ui](https://ui.shadcn.com), distributed as a shadcn registry.
 
-**Demo and docs:** https://shadcn-rtl.vercel.app
+**Demo and docs:** https://shadcn-rtl-ui.vercel.app
 
 ![The same Arabic page with upstream shadcn/ui (left) and shadcn-rtl (right)](docs/before-after.png)
 
@@ -20,38 +20,38 @@ The components follow upstream closely, so the diff against shadcn/ui stays smal
 
 | Item | What it fixes or adds |
 | --- | --- |
-| [`direction-provider`](https://shadcn-rtl.vercel.app/docs/direction-provider) | DirectionProvider + useDirection(): sets dir/lang, feeds Radix's DirectionProvider, optional `<html>` sync |
-| [`arabic-typography`](https://shadcn-rtl.vercel.app/docs/arabic-typography) | Arabic font stack (IBM Plex Sans Arabic, Noto Kufi Arabic), taller line-heights, no letter-spacing on Arabic |
-| [`breadcrumb`](https://shadcn-rtl.vercel.app/docs/breadcrumb) | Separator chevron points the reading way; localisable ellipsis label |
-| [`pagination`](https://shadcn-rtl.vercel.app/docs/pagination) | Mirrored chevrons, logical padding, localisable Previous / Next |
-| [`sheet`](https://shadcn-rtl.vercel.app/docs/sheet) | `side="start" | "end"` that open and slide from the correct edge; dir carried into the portal |
-| [`dropdown-menu`](https://shadcn-rtl.vercel.app/docs/dropdown-menu) | Submenus open to the inline end, mirrored chevron, logical indicator and inset padding, shortcuts not reversed |
-| [`carousel`](https://shadcn-rtl.vercel.app/docs/carousel) | Embla `direction` from the provider, mirrored arrows, swapped arrow keys, logical gutters |
-| [`select`](https://shadcn-rtl.vercel.app/docs/select) | Check indicator and item padding on logical sides |
-| [`dialog`](https://shadcn-rtl.vercel.app/docs/dialog) | Close button at the inline end, `text-start` header, dir carried into the portal |
-| [`input`](https://shadcn-rtl.vercel.app/docs/input) | `startIcon` / `endIcon` slots positioned with logical properties |
-| [`tabs`](https://shadcn-rtl.vercel.app/docs/tabs) | Keyboard navigation and vertical line indicator follow the direction |
-| [`price`](https://shadcn-rtl.vercel.app/docs/price) | `Price` / `NumberDisplay` on Intl.NumberFormat: ar-SA / en, Arabic-Indic or Latin digits, SAR / AED / any currency, compare-at price |
-| [`hijri-date`](https://shadcn-rtl.vercel.app/docs/hijri-date) | `<time>` in the Umm al-Qura Hijri calendar, optional Gregorian date, Gregorian fallback |
+| [`direction-provider`](https://shadcn-rtl-ui.vercel.app/docs/direction-provider) | DirectionProvider + useDirection(): sets dir/lang, feeds Radix's DirectionProvider, optional `<html>` sync |
+| [`arabic-typography`](https://shadcn-rtl-ui.vercel.app/docs/arabic-typography) | Arabic font stack (IBM Plex Sans Arabic, Noto Kufi Arabic), taller line-heights, no letter-spacing on Arabic |
+| [`breadcrumb`](https://shadcn-rtl-ui.vercel.app/docs/breadcrumb) | Separator chevron points the reading way; localisable ellipsis label |
+| [`pagination`](https://shadcn-rtl-ui.vercel.app/docs/pagination) | Mirrored chevrons, logical padding, localisable Previous / Next |
+| [`sheet`](https://shadcn-rtl-ui.vercel.app/docs/sheet) | `side="start" | "end"` that open and slide from the correct edge; dir carried into the portal |
+| [`dropdown-menu`](https://shadcn-rtl-ui.vercel.app/docs/dropdown-menu) | Submenus open to the inline end, mirrored chevron, logical indicator and inset padding, shortcuts not reversed |
+| [`carousel`](https://shadcn-rtl-ui.vercel.app/docs/carousel) | Embla `direction` from the provider, mirrored arrows, swapped arrow keys, logical gutters |
+| [`select`](https://shadcn-rtl-ui.vercel.app/docs/select) | Check indicator and item padding on logical sides |
+| [`dialog`](https://shadcn-rtl-ui.vercel.app/docs/dialog) | Close button at the inline end, `text-start` header, dir carried into the portal |
+| [`input`](https://shadcn-rtl-ui.vercel.app/docs/input) | `startIcon` / `endIcon` slots positioned with logical properties |
+| [`tabs`](https://shadcn-rtl-ui.vercel.app/docs/tabs) | Keyboard navigation and vertical line indicator follow the direction |
+| [`price`](https://shadcn-rtl-ui.vercel.app/docs/price) | `Price` / `NumberDisplay` on Intl.NumberFormat: ar-SA / en, Arabic-Indic or Latin digits, SAR / AED / any currency, compare-at price |
+| [`hijri-date`](https://shadcn-rtl-ui.vercel.app/docs/hijri-date) | `<time>` in the Umm al-Qura Hijri calendar, optional Gregorian date, Gregorian fallback |
 
 ## Install
 
 Each item is a normal shadcn registry item. Run the command in a project that already has shadcn/ui set up (`npx shadcn@latest init`). The CLI copies the source into your project, so you own it. Upstream dependencies such as `button` come from the official shadcn/ui registry.
 
 ```bash
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/direction-provider.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/arabic-typography.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/breadcrumb.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/pagination.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/sheet.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/dropdown-menu.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/carousel.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/select.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/dialog.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/input.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/tabs.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/price.json
-npx shadcn@latest add https://shadcn-rtl.vercel.app/r/hijri-date.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/direction-provider.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/arabic-typography.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/breadcrumb.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/pagination.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/sheet.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/dropdown-menu.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/carousel.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/select.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/dialog.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/input.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/tabs.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/price.json
+npx shadcn@latest add https://shadcn-rtl-ui.vercel.app/r/hijri-date.json
 ```
 
 Installing `dialog`, `sheet`, `select`, etc. overwrites the upstream file of the same name in `components/ui` (the CLI asks first). The API is the same, plus a few optional props for localised labels.
