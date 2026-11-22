@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "direction-provider",
+  "title": "Direction Provider",
+  "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+  "description": "Sets dir (and lang) for a subtree, wraps Radix's DirectionProvider, and exposes useDirection(). Optionally syncs <html dir lang>.",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "files": [
+    {
+      "path": "registry/rtl/ui/direction-provider.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Direction } from \"radix-ui\"\n\ntype Dir = \"ltr\" | \"rtl\"\n\ntype DirectionProviderProps = {\n  /** Text direction for everything inside the provider. */\n  dir: Dir\n  /**\n   * Optional BCP 47 language tag (e.g. \"ar\", \"ar-SA\", \"en\"). Set on the wrapper so\n   * `:lang(ar)` typography rules and screen readers pick the right language.\n   */\n  lang?: string\n  /**\n   * Also write `dir` (and `lang`) onto `<html>`. Use this once, at the root of an app,\n   * so portalled content (dialogs, sheets, menus) and the scrollbar follow the direction.\n   */\n  syncDocument?: boolean\n  /** Render the wrapper element. Turn off when you only want context + `<html>` sync. */\n  asWrapper?: boolean\n  className?: string\n  children: React.ReactNode\n}\n\n/**\n * Sets the reading direction for a subtree.\n *\n * Wraps Radix's `Direction.Provider`, so every Radix primitive inside (dropdown\n * submenus, select, tabs keyboard navigation, sliders, ...) flips its behaviour too.\n * Read the value anywhere with `useDirection()`.\n */\nfunction DirectionProvider({\n  dir,\n  lang,\n  syncDocument = false,\n  asWrapper = true,\n  className,\n  children,\n}: DirectionProviderProps) {\n  React.useEffect(() => {\n    if (!syncDocument) return\n    const html = document.documentElement\n    const prevDir = html.getAttribute(\"dir\")\n    const prevLang = html.getAttribute(\"lang\")\n    html.setAttribute(\"dir\", dir)\n    if (lang) html.setAttribute(\"lang\", lang)\n    return () => {\n      if (prevDir === null) html.removeAttribute(\"dir\")\n      else html.setAttribute(\"dir\", prevDir)\n      if (lang) {\n        if (prevLang === null) html.removeAttribute(\"lang\")\n        else html.setAttribute(\"lang\", prevLang)\n      }\n    }\n  }, [dir, lang, syncDocument])\n\n  return (\n    <Direction.Provider dir={dir}>\n      {asWrapper ? (\n        <div\n          data-slot=\"direction-provider\"\n          dir={dir}\n          lang={lang}\n          className={className}\n        >\n          {children}\n        </div>\n      ) : (\n        children\n      )}\n    </Direction.Provider>\n  )\n}\n\n/**\n * Current direction from the nearest `DirectionProvider` (ours or Radix's).\n * Defaults to \"ltr\" when there is no provider.\n */\nfunction useDirection(localDir?: Dir): Dir {\n  return Direction.useDirection(localDir)\n}\n\nexport { DirectionProvider, useDirection, type Dir }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "categories": [
+    "rtl"
+  ],
+  "type": "registry:ui"
+}

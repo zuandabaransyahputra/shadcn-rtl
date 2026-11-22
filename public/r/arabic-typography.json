@@ -1,0 +1,54 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "arabic-typography",
+  "title": "Arabic Typography",
+  "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+  "description": "Arabic font stack (IBM Plex Sans Arabic / Noto Kufi Arabic), taller line-heights and no letter-spacing for Arabic, Persian and Urdu text.",
+  "cssVars": {
+    "theme": {
+      "font-arabic": "var(--font-ibm-plex-sans-arabic, \"IBM Plex Sans Arabic\", \"Noto Sans Arabic\", \"Segoe UI\", Tahoma, system-ui, sans-serif)",
+      "font-arabic-heading": "var(--font-noto-kufi-arabic, \"Noto Kufi Arabic\", \"IBM Plex Sans Arabic\", \"Noto Sans Arabic\", Tahoma, system-ui, sans-serif)"
+    }
+  },
+  "css": {
+    "@layer base": {
+      ":lang(ar), :lang(fa), :lang(ur), [dir=\"rtl\"]": {
+        "@apply font-arabic": {}
+      },
+      ":lang(ar), :lang(fa), :lang(ur)": {
+        "letter-spacing": "0",
+        "--tracking-tighter": "0",
+        "--tracking-tight": "0",
+        "--tracking-normal": "0",
+        "--tracking-wide": "0",
+        "--tracking-wider": "0",
+        "--tracking-widest": "0",
+        "--text-xs--line-height": "1.8",
+        "--text-sm--line-height": "1.75",
+        "--text-base--line-height": "1.75",
+        "--text-lg--line-height": "1.7",
+        "--text-xl--line-height": "1.6",
+        "--text-2xl--line-height": "1.5",
+        "--text-3xl--line-height": "1.45",
+        "--text-4xl--line-height": "1.4",
+        "line-height": "1.75",
+        "font-kerning": "normal",
+        "text-underline-offset": "0.3em"
+      },
+      ":lang(ar) :is(h1, h2, h3)": {
+        "@apply font-arabic-heading": {},
+        "line-height": "1.4"
+      },
+      ":lang(ar) :is(em, i, cite)": {
+        "font-style": "normal",
+        "font-weight": "600"
+      }
+    }
+  },
+  "docs": "Load the fonts once. Next.js: in app/layout.tsx use next/font/google IBM_Plex_Sans_Arabic({ subsets: [\"arabic\"], weight: [\"400\",\"500\",\"600\",\"700\"], variable: \"--font-ibm-plex-sans-arabic\" }) and Noto_Kufi_Arabic({ subsets: [\"arabic\"], variable: \"--font-noto-kufi-arabic\" }), then add both .variable classes to <html>. Anything else: add <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400..800&display=swap\"> to your document head. Then set lang=\"ar\" dir=\"rtl\" on <html>.",
+  "categories": [
+    "rtl",
+    "typography"
+  ],
+  "type": "registry:item"
+}

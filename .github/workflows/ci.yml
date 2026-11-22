@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Build registry
+        run: pnpm registry:build
+      - name: Registry output is committed
+        run: git diff --exit-code -- public/r
+      - name: Type check
+        run: pnpm typecheck
+      - name: Build site
+        run: pnpm exec next build

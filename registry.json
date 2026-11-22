@@ -1,0 +1,306 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcn-rtl",
+  "homepage": "https://shadcn-rtl.vercel.app",
+  "items": [
+    {
+      "name": "direction-provider",
+      "type": "registry:ui",
+      "title": "Direction Provider",
+      "description": "Sets dir (and lang) for a subtree, wraps Radix's DirectionProvider, and exposes useDirection(). Optionally syncs <html dir lang>.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/direction-provider.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb (RTL)",
+      "description": "Breadcrumb whose chevron separator points the reading way, with a localisable ellipsis label.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination (RTL)",
+      "description": "Pagination with logical padding, mirrored chevrons and localisable Previous / Next text.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet (RTL)",
+      "description": "Sheet with side=\"start\" | \"end\" that opens and slides from the correct edge in RTL. Carries dir into the portal.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu (RTL)",
+      "description": "Dropdown menu with logical insets, a mirrored submenu chevron and submenus that open towards the inline end.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel (RTL)",
+      "description": "Embla carousel with direction wired to the provider, mirrored arrows, swapped arrow-key navigation and logical spacing.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "embla-carousel-react",
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/carousel.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select (RTL)",
+      "description": "Select with the check indicator and padding on logical sides.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog (RTL)",
+      "description": "Dialog with the close button at the inline end, start-aligned header and dir carried into the portal.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input (RTL)",
+      "description": "Input with startIcon / endIcon slots positioned with logical properties.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "files": [
+        {
+          "path": "registry/rtl/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs (RTL)",
+      "description": "Tabs whose keyboard navigation and vertical line indicator follow the reading direction.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "dependencies": [
+        "radix-ui",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/rtl/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "rtl"
+      ]
+    },
+    {
+      "name": "arabic-typography",
+      "type": "registry:item",
+      "title": "Arabic Typography",
+      "description": "Arabic font stack (IBM Plex Sans Arabic / Noto Kufi Arabic), taller line-heights and no letter-spacing for Arabic, Persian and Urdu text.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "cssVars": {
+        "theme": {
+          "font-arabic": "var(--font-ibm-plex-sans-arabic, \"IBM Plex Sans Arabic\", \"Noto Sans Arabic\", \"Segoe UI\", Tahoma, system-ui, sans-serif)",
+          "font-arabic-heading": "var(--font-noto-kufi-arabic, \"Noto Kufi Arabic\", \"IBM Plex Sans Arabic\", \"Noto Sans Arabic\", Tahoma, system-ui, sans-serif)"
+        }
+      },
+      "css": {
+        "@layer base": {
+          ":lang(ar), :lang(fa), :lang(ur), [dir=\"rtl\"]": {
+            "@apply font-arabic": {}
+          },
+          ":lang(ar), :lang(fa), :lang(ur)": {
+            "letter-spacing": "0",
+            "--tracking-tighter": "0",
+            "--tracking-tight": "0",
+            "--tracking-normal": "0",
+            "--tracking-wide": "0",
+            "--tracking-wider": "0",
+            "--tracking-widest": "0",
+            "--text-xs--line-height": "1.8",
+            "--text-sm--line-height": "1.75",
+            "--text-base--line-height": "1.75",
+            "--text-lg--line-height": "1.7",
+            "--text-xl--line-height": "1.6",
+            "--text-2xl--line-height": "1.5",
+            "--text-3xl--line-height": "1.45",
+            "--text-4xl--line-height": "1.4",
+            "line-height": "1.75",
+            "font-kerning": "normal",
+            "text-underline-offset": "0.3em"
+          },
+          ":lang(ar) :is(h1, h2, h3)": {
+            "@apply font-arabic-heading": {},
+            "line-height": "1.4"
+          },
+          ":lang(ar) :is(em, i, cite)": {
+            "font-style": "normal",
+            "font-weight": "600"
+          }
+        }
+      },
+      "docs": "Load the fonts once. Next.js: in app/layout.tsx use next/font/google IBM_Plex_Sans_Arabic({ subsets: [\"arabic\"], weight: [\"400\",\"500\",\"600\",\"700\"], variable: \"--font-ibm-plex-sans-arabic\" }) and Noto_Kufi_Arabic({ subsets: [\"arabic\"], variable: \"--font-noto-kufi-arabic\" }), then add both .variable classes to <html>. Anything else: add <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400..800&display=swap\"> to your document head. Then set lang=\"ar\" dir=\"rtl\" on <html>.",
+      "categories": [
+        "rtl",
+        "typography"
+      ]
+    },
+    {
+      "name": "price",
+      "type": "registry:ui",
+      "title": "Price & Number",
+      "description": "Price and NumberDisplay built on Intl.NumberFormat: ar-SA / en, Arabic-Indic or Latin digits, SAR / AED / any currency with locale-correct placement, compare-at price.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "files": [
+        {
+          "path": "registry/rtl/ui/price.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/rtl/lib/format-number.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "categories": [
+        "rtl",
+        "i18n"
+      ]
+    },
+    {
+      "name": "hijri-date",
+      "type": "registry:ui",
+      "title": "Hijri Date",
+      "description": "<time> in the Umm al-Qura Hijri calendar via Intl.DateTimeFormat, with an optional Gregorian date and a Gregorian fallback.",
+      "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+      "files": [
+        {
+          "path": "registry/rtl/ui/hijri-date.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/rtl/lib/format-date.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "categories": [
+        "rtl",
+        "i18n"
+      ]
+    }
+  ]
+}

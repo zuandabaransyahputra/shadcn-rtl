@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "title": "Input (RTL)",
+  "author": "Zuanda Baransyah Putra <https://zuanda.web.id>",
+  "description": "Input with startIcon / endIcon slots positioned with logical properties.",
+  "files": [
+    {
+      "path": "registry/rtl/ui/input.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ntype InputProps = React.ComponentProps<\"input\"> & {\n  /** Icon or adornment at the inline start (left in LTR, right in RTL). */\n  startIcon?: React.ReactNode\n  /** Icon or adornment at the inline end (right in LTR, left in RTL). */\n  endIcon?: React.ReactNode\n  /** Class for the wrapper that is rendered when an icon slot is used. */\n  wrapperClassName?: string\n}\n\nconst inputClassName =\n  \"h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40\"\n\nconst slotClassName =\n  \"pointer-events-none absolute inset-y-0 flex items-center text-muted-foreground [&_a]:pointer-events-auto [&_button]:pointer-events-auto [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\"\n\n/**\n * shadcn/ui Input with `startIcon` / `endIcon` slots positioned with logical\n * properties, so a search icon sits on the right and a clear button on the left\n * in Arabic layouts without any extra classes.\n *\n * Without icons it renders a bare <input>, exactly like upstream.\n */\nfunction Input({\n  className,\n  type,\n  startIcon,\n  endIcon,\n  wrapperClassName,\n  ...props\n}: InputProps) {\n  const input = (\n    <input\n      type={type}\n      data-slot=\"input\"\n      className={cn(\n        inputClassName,\n        startIcon != null && \"ps-9\",\n        endIcon != null && \"pe-9\",\n        className\n      )}\n      {...props}\n    />\n  )\n\n  if (startIcon == null && endIcon == null) return input\n\n  return (\n    <div\n      data-slot=\"input-wrapper\"\n      className={cn(\"relative w-full\", wrapperClassName)}\n    >\n      {startIcon != null && (\n        <span data-slot=\"input-start-icon\" className={cn(slotClassName, \"start-3\")}>\n          {startIcon}\n        </span>\n      )}\n      {input}\n      {endIcon != null && (\n        <span data-slot=\"input-end-icon\" className={cn(slotClassName, \"end-3\")}>\n          {endIcon}\n        </span>\n      )}\n    </div>\n  )\n}\n\nexport { Input, type InputProps }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "categories": [
+    "rtl"
+  ],
+  "type": "registry:ui"
+}
